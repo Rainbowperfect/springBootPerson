@@ -1,2 +1,9 @@
+org\person\pojo\Dog.class
 org\person\controller\HelloController.class
 org\person\Application.class
+org\person\config\MyConfig.class
+org\person\project\ConnectionOracle.class
+org\person\project\FileCount.class
+META-INF\spring-configuration-metadata.json
+org\person\pojo\User.class
+org\person\service\HelloService.class
