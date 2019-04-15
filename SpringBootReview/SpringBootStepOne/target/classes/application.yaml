@@ -1,4 +1,9 @@
 user:
   lastName: sad
-  age: 18
+  age: 189
   boss : true
+logging:
+  path: D:/workspace/logs/springBoot/log
+spring:
+  profiles:
+    active: dev
