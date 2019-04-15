@@ -2,7 +2,8 @@ package JunitCheck;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.person.pojo.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
@@ -27,11 +28,26 @@ public class JunitTesting{
 
 
 
-    @Autowired
-    private User user;
+    // @Autowired
+    // private User user;
+    // @Test
+    // public void testUser(){
+    //     Integer age = user.getAge();
+    //     System.out.println(age);
+    // }
+
+    /**
+     * 日志的级别。springboot默认的为info
+     * trace->debugger->info->warn->error
+     */
     @Test
-    public void testUser(){
-        Integer age = user.getAge();
-        System.out.println(age);
+    public void testLoggLerver(){
+
+        Logger logger = LoggerFactory.getLogger(JunitTesting.class);
+        logger.trace("it's trace");
+        logger.debug("it's debugger");
+        logger.warn("it's warn");
+        logger.error("it's error");
+
     }
 }
