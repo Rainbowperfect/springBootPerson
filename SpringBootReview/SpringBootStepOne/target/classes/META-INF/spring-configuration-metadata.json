@@ -2,6 +2,12 @@
   "hints": [],
   "groups": [
     {
+      "sourceType": "org.person.config.DruidConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "druid()",
+      "type": "javax.sql.DataSource"
+    },
+    {
       "sourceType": "org.person.pojo.User",
       "name": "user",
       "type": "org.person.pojo.User"

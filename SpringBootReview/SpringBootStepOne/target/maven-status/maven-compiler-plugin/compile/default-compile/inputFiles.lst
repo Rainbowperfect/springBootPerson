@@ -4,5 +4,10 @@ D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\s
 D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\Application.java
 D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\project\FileCount.java
 D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\project\ConnectionOracle.java
+D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\config\DruidConfig.java
+D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\pojo\Employee.java
+D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\pojo\Department.java
+D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\service\EmployeeRepository.java
 D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\config\MyConfig.java
 D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\pojo\Dog.java
+D:\workspace\idea_worksapce\SpringBootApply\SpringBootReview\SpringBootStepOne\src\main\java\org\person\compotent\JpaConfiguration.java
