@@ -2,15 +2,18 @@ package org.person.pojo;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name = "employee")
 public class Employee implements Serializable {
 
+    private static final  Long serialVersionUID =1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
     @Column(name = "lastName")
     private String lastName;
 
@@ -19,8 +22,13 @@ public class Employee implements Serializable {
 
     //1 male, 0 female
 
+    @Column(name = "gender")
     private Integer gender;
+    @Column(name="department")
+    //@ManyToOne
+
     private Department department;
+    @Column(name = "birth")
     private Date birth;
 
     public Integer getId() {
@@ -70,15 +78,17 @@ public class Employee implements Serializable {
     public void setBirth(Date birth) {
         this.birth = birth;
     }
-    public Employee(Integer id, String lastName, String email, Integer gender,
-                    Department department) {
-        super();
-        this.id = id;
+
+    public static Long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Employee(String lastName, String email, Integer gender, Department department, Date birth) {
         this.lastName = lastName;
         this.email = email;
         this.gender = gender;
         this.department = department;
-        this.birth = new Date();
+        this.birth = birth;
     }
 
     public Employee() {
@@ -86,15 +96,7 @@ public class Employee implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", gender=" + gender +
-                ", department=" + department +
-                ", birth=" + birth +
-                '}';
+        return "Employee{" + "id=" + id + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + ", gender=" + gender + ", department=" + department + ", birth=" + birth + '}';
     }
-	
-	
+
 }
