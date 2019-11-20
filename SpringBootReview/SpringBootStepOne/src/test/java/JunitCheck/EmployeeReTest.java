@@ -2,23 +2,26 @@ package JunitCheck;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = EmployeeReTest.class)
 public class EmployeeReTest {
 
-    @Autowired
-    private TestRestTemplate restTemplate;
-
     @Test
     public void employeeQuery() {
-
-        String forObject = restTemplate.getForObject("/", String.class);
-        assert(forObject).equals("Hello word");
+        //LocalDateTime time = LocalDateTime.now();
+        Date time = new Date();
+        SimpleDateFormat formater=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format1 = formater.format(time);
+        System.out.println(format1);
+        String[] split = format1.replace(":", "").replace("-", "").split(" ");
+        for (int i = 0; i < split.length; i++) {
+            System.out.println("变化后的值"+split[1]);
+        }
     }
-
 }
